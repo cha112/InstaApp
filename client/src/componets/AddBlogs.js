@@ -1,6 +1,5 @@
 import { Box, Button, InputLabel, TextField, Typography } from "@mui/material";
 import axios from "axios";
-import TextareaAutosize from '@mui/base/TextareaAutosize';
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -77,7 +76,7 @@ const AddBlogs = () => {
           <InputLabel className={classes.font} sx={labelStyles}>
             Description
           </InputLabel>
-          <TextareaAutosize
+          <textarea
             className={classes.font}
             name="description"
             onChange={handleChange}
