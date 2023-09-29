@@ -3,11 +3,13 @@ const  userRouter  = require("./routes/user-routes");
 const blogRouter = require("./routes/blog-routes");
 require("./config/db");
 const cors = require('cors');
+import { urlencoded } from "express";
 
 const app = express();
 app.use( (reg, res, next) => {
     res.setHeader (
-    'https://harmonious-pony-28d9b2.netlify.app'
+    "Access -Control-Allow-Origin",
+    "https://harmonious-pony-28d9b2.netlify.app"
 );
 res.setHeader (
     "Access -Control-Allow-Methods",
@@ -29,6 +31,7 @@ app.use("/api/blogs",blogRouter);
 app.use("/api",(req,res,next) =>{
     res.send("hello")
 })
+app.use(urlencoded({extended : true}));
 app.set("trust proxy");
 
 //define port
