@@ -7,7 +7,6 @@ const cors = require('cors');
 const app = express();
 app.use( (reg, res, next) => {
     res.setHeader (
-    "Access -Control-Allow-Origin",
     "https://harmonious-pony-28d9b2.netlify.app"
 );
 res.setHeader (
