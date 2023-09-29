@@ -3,7 +3,7 @@ const  userRouter  = require("./routes/user-routes");
 const blogRouter = require("./routes/blog-routes");
 require("./config/db");
 const cors = require('cors');
-import { urlencoded } from "express";
+const urlencoded = require("express");
 
 const app = express();
 app.use( (reg, res, next) => {
