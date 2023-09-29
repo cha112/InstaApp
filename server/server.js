@@ -5,8 +5,21 @@ require("./config/db");
 const cors = require('cors');
 
 const app = express();
+app.use( (reg, res, next) => {
+    res.setHeader (
+    "Access -Control-Allow-Origin",
+    "https://astounding-genie-e6519d.netlify.app"
+);
+res.setHeader (
+    "Access -Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+);
+    next();
+});
 
-app.use(cors());
+app.use(cors ({ credentials: true, origin: "https://astounding-genie-e6519d.netlify.app"})
+);
+
 
 app.set("view engine","ejs");
 app.use(express.json());
