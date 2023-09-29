@@ -29,7 +29,6 @@ app.use("/api/blogs",blogRouter);
 app.use("/api",(req,res,next) =>{
     res.send("hello")
 })
-app.use(urlencoded({extended : true}));
 app.set("trust proxy");
 
 //define port
