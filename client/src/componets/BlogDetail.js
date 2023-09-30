@@ -38,6 +38,10 @@ const BlogDetail = () => {
       .put(`https://instaappp.onrender.com/api/blogs/update/${id}`, {
         title: inputs.title,
         description: inputs.description,
+      },{
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
       .catch((err) => console.log(err));
 

@@ -6,17 +6,6 @@ const cors = require('cors');
 const urlencoded = require("express");
 
 const app = express();
-app.use( (reg, res, next) => {
-    res.setHeader (
-    "Access -Control-Allow-Origin",
-    "https://verdant-faloodeh-779433.netlify.app"
-);
-res.setHeader (
-    "Access -Control-Allow-Methods",
-    "GET, POST, PUT, DELETE, OPTIONS"
-);
-    next();
-});
 
 app.use(cors ({ credentials: true, origin: "https://verdant-faloodeh-779433.netlify.app"})
 );

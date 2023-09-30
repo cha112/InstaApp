@@ -27,6 +27,10 @@ const AddBlogs = () => {
         desc: inputs.description,
         img: inputs.imageURL,
         user: localStorage.getItem("userId"),
+      },{
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
       .catch((err) => console.log(err));
     const data = await res.data;

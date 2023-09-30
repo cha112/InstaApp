@@ -26,6 +26,10 @@ const Login = () => {
         name: inputs.name,
         email: inputs.email,
         password: inputs.password,
+      },{
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
       .catch((err) => console.log(err));
 
