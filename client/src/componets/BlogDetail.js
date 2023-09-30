@@ -19,7 +19,7 @@ const BlogDetail = () => {
   };
   const fetchDetails = async () => {
     const res = await axios
-      .get(`http://localhost:3001/api/blogs/${id}`)
+      .get(`https://instaappp.onrender.com/api/blogs/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -35,7 +35,7 @@ const BlogDetail = () => {
   }, [id]);
   const sendRequest = async () => {
     const res = await axios
-      .put(`http://localhost:3001/api/blogs/update/${id}`, {
+      .put(`https://instaappp.onrender.com/api/blogs/update/${id}`, {
         title: inputs.title,
         description: inputs.description,
       })

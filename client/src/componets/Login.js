@@ -22,7 +22,7 @@ const Login = () => {
   };
   const sendRequest = async (type = "login") => {
     const res = await axios
-      .post(`http://localhost:3001/api/users/${type}`, {
+      .post(`https://instaappp.onrender.com/api/users/${type}`, {
         name: inputs.name,
         email: inputs.email,
         password: inputs.password,

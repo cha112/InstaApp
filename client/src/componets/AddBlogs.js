@@ -22,7 +22,7 @@ const AddBlogs = () => {
   };
   const sendRequest = async () => {
     const res = await axios
-      .post("http://localhost:3001/api/blogs/add", {
+      .post("https://instaappp.onrender.com/api/blogs/add", {
         title: inputs.title,
         desc: inputs.description,
         img: inputs.imageURL,

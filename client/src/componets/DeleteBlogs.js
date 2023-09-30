@@ -5,7 +5,7 @@ const DeleteButton = ({ blogId, onDelete }) => {
   const handleDelete = async () => {
     try {
       // Send a delete request to your backend
-      await axios.delete(`http://localhost:3001/api/blogs/${blogId}`);
+      await axios.delete(`https://instaappp.onrender.com/api/blogs/${blogId}`);
       // Call the onDelete callback to update the UI
       onDelete();
     } catch (error) {

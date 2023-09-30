@@ -53,7 +53,7 @@ const UserBlogs = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .get(`http://localhost:3001/api/blogs/user/${id}`)
+      .get(`https://instaappp.onrender.com/api/blogs/user/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -64,7 +64,7 @@ const UserBlogs = () => {
   }, []);
 
   const handleDelete = (blogId) => {
-    axios.delete(`http://localhost:3001/api/blogs/${blogId}`).then(() => {
+    axios.delete(`https://instaappp.onrender.com/api/blogs/${blogId}`).then(() => {
       sendRequest().then((data) => setUser(data.user));
     });
   };

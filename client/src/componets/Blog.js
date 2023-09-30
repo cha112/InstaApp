@@ -22,7 +22,7 @@ const Blogs = ({ title, desc, img, user, isUser, id }) => {
   };
   const deleteRequest = async () => {
     const res = await axios
-      .delete(`http://localhost:3001/api/blogs/${id}`)
+      .delete(`https://instaappp.onrender.com/api/blogs/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
