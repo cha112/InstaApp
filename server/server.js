@@ -9,7 +9,7 @@ const app = express();
 app.use( (reg, res, next) => {
     res.setHeader (
     "Access -Control-Allow-Origin",
-    "https://harmonious-pony-28d9b2.netlify.app"
+    "https://verdant-faloodeh-779433.netlify.app"
 );
 res.setHeader (
     "Access -Control-Allow-Methods",
@@ -18,7 +18,7 @@ res.setHeader (
     next();
 });
 
-app.use(cors ({ credentials: true, origin: "https://harmonious-pony-28d9b2.netlify.app"})
+app.use(cors ({ credentials: true, origin: "https://verdant-faloodeh-779433.netlify.app"})
 );
 
 
